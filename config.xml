@@ -1,0 +1,26 @@
+<main>
+    <name>
+        <key>Имя анализируемого пакета</key>
+        <value>Package</value>
+    </name>
+    <URL>
+        <key>URL-адрес репозитория или путь к файлу тестового репозитория</key>
+        <value>Package</value>
+    </URL>
+    <mode>
+        <key>Имя анализируемого пакета</key>
+        <value>Package</value>
+    </mode>
+    <version>
+        <key>Имя анализируемого пакета</key>
+        <value>Package</value>
+    </version>
+    <ASCIImode>
+        <key>Имя анализируемого пакета</key>
+        <value>Package</value>
+    </ASCIImode>
+    <filtration>
+        <key>Имя анализируемого пакета</key>
+        <value>Package</value>
+    </filtration>
+</main>
