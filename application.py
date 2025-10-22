@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+
 def application():
     tree = ET.parse("config.xml")
     root = tree.getroot()

@@ -1,8 +1,10 @@
 <main>
+
     <name name = "pack"></name>
     <URL URL = "https://github.com/omeGONE/config_pr_2.git"></URL>
     <mode mode = "1"></mode>
     <version version = "1.0"></version>
     <ASCIImode ASCIImode = "1"></ASCIImode>
     <filtration filtration = "abc"></filtration>
+
 </main>
