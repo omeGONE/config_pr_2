@@ -1,26 +1,8 @@
 <main>
-    <name>
-        <key>Имя анализируемого пакета</key>
-        <value>Package</value>
-    </name>
-    <URL>
-        <key>URL-адрес репозитория или путь к файлу тестового репозитория</key>
-        <value>Package</value>
-    </URL>
-    <mode>
-        <key>Имя анализируемого пакета</key>
-        <value>Package</value>
-    </mode>
-    <version>
-        <key>Имя анализируемого пакета</key>
-        <value>Package</value>
-    </version>
-    <ASCIImode>
-        <key>Имя анализируемого пакета</key>
-        <value>Package</value>
-    </ASCIImode>
-    <filtration>
-        <key>Имя анализируемого пакета</key>
-        <value>Package</value>
-    </filtration>
+    <name name = "pack"></name>
+    <URL URL = "https://github.com/omeGONE/config_pr_2.git"></URL>
+    <mode mode = "1"></mode>
+    <version version = "1.0"></version>
+    <ASCIImode ASCIImode = "1"></ASCIImode>
+    <filtration filtration = "abc"></filtration>
 </main>
