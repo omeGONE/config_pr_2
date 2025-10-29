@@ -47,5 +47,4 @@ def find_package_dependencies_from_url(nupkg_url):
                             direct_deps.append({'id': package_id, 'version': version})
                     if direct_deps:
                         dependencies_by_framework['all'] = direct_deps
-
     return dependencies_by_framework
