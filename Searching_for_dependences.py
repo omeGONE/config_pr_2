@@ -3,8 +3,6 @@ import zipfile
 import xml.etree.ElementTree as ET
 import io
 
-o = open("test.xml")
-
 def find_package_dependencies_from_url(nupkg_url):
     dependencies_by_framework = {}
     response = requests.get(nupkg_url)
@@ -28,7 +26,7 @@ def find_package_dependencies_from_url(nupkg_url):
                 dependencies_element = metadata.find(f'{namespace}dependencies')
 
                 for group in dependencies_element.findall(f'{namespace}group'):
-                    framework = group.get('targetFramework', 'all')  # 'all' если платформа не указана
+                    framework = group.get('targetFramework', 'all')
 
                     framework_deps = []
                     for dependency in group.findall(f'{namespace}dependency'):
@@ -40,7 +38,6 @@ def find_package_dependencies_from_url(nupkg_url):
                     if framework_deps:
                         dependencies_by_framework[framework] = framework_deps
 
-                    # Обрабатываем случай, когда зависимости не сгруппированы (старый формат)
                 if not dependencies_by_framework:
                     direct_deps = []
                     for dependency in dependencies_element.findall(f'{namespace}dependency'):
