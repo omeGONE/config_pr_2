@@ -3,8 +3,6 @@ import zipfile
 import xml.etree.ElementTree as ET
 import io
 
-o = open("test.xml")
-
 def find_package_dependencies_from_url(nupkg_url):
     dependencies_by_framework = {}
     response = requests.get(nupkg_url)
