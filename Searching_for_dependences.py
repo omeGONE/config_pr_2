@@ -3,9 +3,11 @@ import zipfile
 import xml.etree.ElementTree as ET
 import io
 
-def find_package_dependencies_from_url(nupkg_url):
+def find_package_dependencies_from_url(url):
     dependencies_by_framework = {}
-    response = requests.get(nupkg_url)
+    response = requests.get(url)
+    data = response.json()
+    response = requests.get(data["packageContent"])
 
     with zipfile.ZipFile(io.BytesIO(response.content)) as archive:
         nuspec_file = None

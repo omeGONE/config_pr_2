@@ -1,9 +1,9 @@
 <main>
 
-    <name name = "pack"></name>
-    <URL URL = "https://github.com/omeGONE/config_pr_2.git"></URL>
+    <name name = "Microsoft.Bcl.AsyncInterfaces"></name>
+    <URL URL = "https://api.nuget.org/v3/registration5-semver1/{package.lower()}/{version}.json"></URL>
     <mode mode = "1"></mode>
-    <version version = "1.0"></version>
+    <version version = "10.0.0"></version>
     <ASCIImode ASCIImode = "1"></ASCIImode>
     <filtration filtration = "abc"></filtration>
 
