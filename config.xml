@@ -1,7 +1,7 @@
 <main>
 
-    <name name = "Microsoft.Bcl.AsyncInterfaces"></name>
-    <URL URL = "https://api.nuget.org/v3/registration5-semver1/{package.lower()}/{version}.json"></URL>
+    <name name = "A"></name>
+    <URL URL = "https://api.nuget.org/v3/registration5-semver1"></URL>
     <mode mode = "1"></mode>
     <version version = "10.0.0"></version>
     <ASCIImode ASCIImode = "1"></ASCIImode>
