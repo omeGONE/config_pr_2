@@ -1,6 +1,6 @@
 from get_dependences_wrapper import get_dependencies_wrapper
 
-def build_dependency_graph(current_package, graph, visited, is_test_mode, repo_url, test_data, filter_str):
+def build_dependency_graph(current_package, graph, visited, is_test_mode, repo_url, filter_str):
     q = [current_package]
     def BFS(pack):
         if pack in visited:
@@ -8,7 +8,7 @@ def build_dependency_graph(current_package, graph, visited, is_test_mode, repo_u
 
         visited.add(pack)
 
-        dependencies = get_dependencies_wrapper(pack, is_test_mode, repo_url, test_data, filter_str)
+        dependencies = get_dependencies_wrapper(pack, is_test_mode, repo_url, filter_str)
 
         graph[pack] = dependencies
 

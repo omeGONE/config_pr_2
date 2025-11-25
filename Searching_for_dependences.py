@@ -4,9 +4,24 @@ import xml.etree.ElementTree as ET
 import io
 
 def find_package_dependencies_from_url(url):
-    dependencies_by_framework = {}
     response = requests.get(url)
+    response.raise_for_status()
     data = response.json()
+
+    items = data.get("items", [])
+    last_page = items[-1]
+    versions_list = last_page.get("items")
+    if not versions_list:
+        page_response = requests.get(last_page["@id"])
+        versions_list = page_response.json().get("items", [])
+    if not versions_list:
+        return {}
+
+    latest_package_entry = versions_list[-1]
+    leaf_url = latest_package_entry["@id"]
+    response = requests.get(leaf_url)
+    data = response.json()
+    dependencies_by_framework = {}
     response = requests.get(data["packageContent"])
 
     with zipfile.ZipFile(io.BytesIO(response.content)) as archive:
