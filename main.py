@@ -1,4 +1,5 @@
 from build_dependency_graph import build_dependency_graph
+from build_reverse_dependency_graph import build_reverse_dependency_graph
 import xml.etree.ElementTree as ET
 
 
@@ -16,17 +17,21 @@ url = root[1].attrib["URL"]
 # https://api.nuget.org/v3/registration5-semver1
 
 graph = {}
+re_graph = {}
 visited = set()
 
-build_dependency_graph(
-        package,
-        graph,
-        visited,
-        mode,
-        url,
-        filter_str
-    )
+# build_dependency_graph(
+#         package,
+#         graph,
+#         visited,
+#         mode,
+#         url,
+#         filter_str
+#     )
+#
+# print(graph)
 
-print(graph)
+if int(mode) == 1:
+    build_reverse_dependency_graph(package, eval(open(url).read()), re_graph)
 
-
+print(re_graph)

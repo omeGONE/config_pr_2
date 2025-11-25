@@ -1,10 +1,10 @@
 <main>
 
-    <name name = "System.Text.Json"></name>
-    <URL URL = "https://api.nuget.org/v3/registration5-semver1"></URL>
-    <mode mode = "0"></mode>
+    <name name = "C"></name>
+    <URL URL = "GRAPH1.py"></URL>
+    <mode mode = "1"></mode>
     <version version = "10.0.0"></version>
     <ASCIImode ASCIImode = "1"></ASCIImode>
-    <filtration filtration = "abc"></filtration>
+    <filtration filtration = "F"></filtration>
 
 </main>
