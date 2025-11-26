@@ -13,11 +13,17 @@ def build_reverse_dependency_graph(target_package, forward_graph, end_graph):
 
             if parent not in inverse_graph[child]:
                 inverse_graph[child].append(parent)
-    print(inverse_graph)
 
     q = [target_package]
+    visited = set()
 
     def BFS(pack):
+
+        if pack in visited:
+            return
+
+        visited.add(pack)
+
         dependencies = inverse_graph[pack]
         end_graph[pack] = dependencies
         for dep in dependencies:
